@@ -1,0 +1,72 @@
+body {
+  background-color: #f4f1ee;
+  color: #333333;
+  font-family: Arial, sans-serif;
+}
+
+h1, h2, h3 {
+  color: #0b355d;
+}
+
+button, .button {
+  background-color: #d1495b;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover, .button:hover {
+  background-color: #b03c4a;
+}
+
+/* Gallery image size */
+.project-gallery img {
+  width: 100%;
+  max-width: 300px; /* adjust this */
+  border-radius: 8px;
+  display: block;
+  margin: auto;
+  cursor: pointer;
+}
+/* Force Lightbox arrows to always show */
+.lb-prev, .lb-next {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+table {
+  border-collapse: collapse;
+  margin-bottom: 1em;
+}
+
+td {
+  padding: 4px 12px 4px 0;
+  vertical-align: top;
+}
+section table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+section th {
+  text-align: left;
+  font-size: 1.2em;
+  padding-bottom: 10px;
+}
+
+section td {
+  padding: 4px 8px;
+}
+.compliance-note {
+  background-color: #f0f0f0;
+  border-left: 4px solid #d1495b;
+  padding: 12px 20px;
+  margin: 20px 0;
+  font-size: 0.9rem;
+  color: #333333;
+}
+
+/* You can add more styles here later */
