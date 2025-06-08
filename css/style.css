@@ -1,11 +1,20 @@
 body {
   background-color: #f4f1ee;
   color: #333333;
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;  /* Added 'Helvetica' for better fallback */
 }
 
 h1, h2, h3 {
   color: #0b355d;
+}
+
+section h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+section p {
+  line-height: 1.6;
 }
 
 button, .button {
@@ -17,8 +26,13 @@ button, .button {
   cursor: pointer;
 }
 
+button:focus, .button:focus {
+  outline: 2px solid #d1495b;  /* Added focus outline for accessibility */
+}
+
 button:hover, .button:hover {
   background-color: #b03c4a;
+  transition: background-color 0.3s ease;  /* Smooth transition for background color */
 }
 
 /* Gallery image size */
@@ -30,11 +44,13 @@ button:hover, .button:hover {
   margin: auto;
   cursor: pointer;
 }
+
 /* Force Lightbox arrows to always show */
 .lb-prev, .lb-next {
   opacity: 1 !important;
   visibility: visible !important;
 }
+/* General table styles */
 table {
   border-collapse: collapse;
   margin-bottom: 1em;
@@ -44,29 +60,42 @@ td {
   padding: 4px 12px 4px 0;
   vertical-align: top;
 }
+
+/* Section-specific table styling */
 section table {
   border-collapse: collapse;
   width: 100%;
-  max-width: 400px;
+  max-width: 100%;  /* Allow tables to take up full width */
   margin-bottom: 20px;
+  overflow-x: auto; /* Add horizontal scroll for tables */
 }
 
+/* Table headers */
 section th {
   text-align: left;
   font-size: 1.2em;
   padding-bottom: 10px;
 }
 
+/* Table data cells */
 section td {
   padding: 4px 8px;
+}
+
+/* Ensure tables are responsive on smaller screens */
+@media (max-width: 600px) {
+  section table {
+    max-width: 100%;
+  }
 }
 .compliance-note {
   background-color: #f0f0f0;
   border-left: 4px solid #d1495b;
   padding: 12px 20px;
   margin: 20px 0;
-  font-size: 0.9rem;
+  font-size: 1rem;  /* Increased font size for better readability */
   color: #333333;
 }
+
 
 /* You can add more styles here later */
