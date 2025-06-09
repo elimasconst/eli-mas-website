@@ -44,6 +44,23 @@ button:hover, .button:hover {
   margin: auto;
   cursor: pointer;
 }
+.project-gallery {
+  text-align: center;  /* Center the text inside the gallery */
+  padding: 20px;
+}
+
+.project-gallery h2, .project-gallery p {
+  text-align: center;  /* Ensure all text elements are centered */
+}
+
+.project-gallery img {
+  width: 100%;
+  max-width: 300px;  /* Adjust this to fit the desired image size */
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;  /* Center the images */
+  cursor: pointer;
+}
 
 /* Force Lightbox arrows to always show */
 .lb-prev, .lb-next {
@@ -95,6 +112,35 @@ section td {
   margin: 20px 0;
   font-size: 1rem;  /* Increased font size for better readability */
   color: #333333;
+}
+/* Styling for the logo */
+.logo {
+  width: 150px; /* Adjust the size of the logo */
+  margin: 10px 0;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Remove bullet points from the 'Our Services' section */
+.services-list {
+  list-style-type: none;  /* Removes the bullet points */
+  padding-left: 0;        /* Removes indentation */
+}
+
+/* Center the text in the lightbox popup */
+#lightbox .lb-data .lb-details {
+  text-align: center;  /* Center the text */
+  width: 100%;          /* Ensure the container uses full width */
+  padding: 10px 0;      /* Adds vertical padding */
+}
+
+/* Optionally, if you want to style the caption */
+#lightbox .lb-data .lb-caption {
+  font-size: 16px;      /* Adjust the font size */
+  font-weight: bold;    /* Make the caption bold */
 }
 
 
