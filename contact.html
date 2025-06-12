@@ -16,36 +16,99 @@
   </header>
 
   <main>
-    <section>
-      <table style="border-collapse: collapse; width: auto; margin-bottom: 20px;">
-        <tr><th colspan="2" style="text-align: left; font-weight: bold;">Business Hours</th></tr>
-        <tr><td style="padding-right: 10px; white-space: nowrap;">Monday:</td><td style="white-space: nowrap;">8 AM to 5 PM</td></tr>
-        <tr><td style="padding-right: 10px; white-space: nowrap;">Tuesday:</td><td style="white-space: nowrap;">8 AM to 5 PM</td></tr>
-        <tr><td style="padding-right: 10px; white-space: nowrap;">Wednesday:</td><td style="white-space: nowrap;">8 AM to 5 PM</td></tr>
-        <tr><td style="padding-right: 10px; white-space: nowrap;">Thursday:</td><td style="white-space: nowrap;">8 AM to 5 PM</td></tr>
-        <tr><td style="padding-right: 10px; white-space: nowrap;">Friday:</td><td style="white-space: nowrap;">8 AM to 5 PM</td></tr>
-        <tr><td style="padding-right: 10px; white-space: nowrap;">Saturday:</td><td style="white-space: nowrap;">8 AM to 5 PM</td></tr>
-        <tr><td style="padding-right: 10px; white-space: nowrap;">Sunday:</td><td style="white-space: nowrap;">Closed</td></tr>
-      </table>
-    </section>
+  <section class="contact-section">
 
-    <section>
-      <h2>Contact Info</h2>
+    <h2>Business Hours</h2>
+<table style="border-collapse: collapse; width: auto; margin: 0 auto 20px;">
+  <tr><th colspan="2" style="text-align: left; font-weight: bold;">Business Hours</th></tr>
+  <tr><td style="padding-right: 10px; white-space: nowrap;">Monday:</td><td style="white-space: nowrap;">8 AM to 5 PM</td></tr>
+  <tr><td style="padding-right: 10px; white-space: nowrap;">Tuesday:</td><td style="white-space: nowrap;">8 AM to 5 PM</td></tr>
+  <tr><td style="padding-right: 10px; white-space: nowrap;">Wednesday:</td><td style="white-space: nowrap;">8 AM to 5 PM</td></tr>
+  <tr><td style="padding-right: 10px; white-space: nowrap;">Thursday:</td><td style="white-space: nowrap;">8 AM to 5 PM</td></tr>
+  <tr><td style="padding-right: 10px; white-space: nowrap;">Friday:</td><td style="white-space: nowrap;">8 AM to 5 PM</td></tr>
+  <tr><td style="padding-right: 10px; white-space: nowrap;">Saturday:</td><td style="white-space: nowrap;">8 AM to 5 PM</td></tr>
+  <tr><td style="padding-right: 10px; white-space: nowrap;">Sunday:</td><td style="white-space: nowrap;">Closed</td></tr>
+</table>
+
+    <h2>Contact Info</h2>
+    <div class="contact-details">
       <p><strong>📞 Phone:</strong> <a href="tel:9147556641">914-755-6641</a></p>
-      <p><strong>📍 Address:</strong>
-        <a href="https://www.google.com/maps/place/1204+Boynton+Ave,+Bronx,+NY+10472" target="_blank">
-          1204 Boynton Ave., Bronx, NY 10472
-        </a>
-      </p>
+      <p><strong>📍 Address:</strong> <a href="https://www.google.com/maps/place/1204+Boynton+Ave,+Bronx,+NY+10472" target="_blank">1204 Boynton Ave., Bronx, NY 10472</a></p>
       <p><strong>License #:</strong> <a href="https://a866-dcwpbp.nyc.gov/search" target="_blank">2083303-DCA (NYC)</a></p>
       <p><em>(To verify license, enter “2083303-DCA” in the NYC DCA search box)</em></p>
-    </section>
+    </div>
+<h2>Send Us a Message</h2>
+<form class="contact-form" action="#" method="post">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required />
 
-    <p><a href="index.html" class="button">← Back to Home</a></p>
-  </main>
+  <label for="phone">Phone Number:</label>
+  <input type="tel" id="phone" name="phone" required />
+
+  <label for="work-type">Type of Work:</label>
+<select id="work-type" name="work-type" required>
+  <option value="">-- Select --</option>
+  <option value="exterior">Exterior Work</option>
+  <option value="interior">Interior Work</option>
+  <option value="roofing">Roofing</option>
+</select>
+
+<label for="subservice" id="subservice-label" style="display: none;">Specific Service:</label>
+<select id="subservice" name="subservice" required style="display: none;">
+  <option value="">-- Select a type of work first --</option>
+</select>
+
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" rows="5" required></textarea>
+
+  <button type="submit">Submit</button>
+</form>
+
+    <div class="back-button">
+      <a class="button" href="index.html">← Back to Home</a>
+    </div>
+
+  </section>
+</main>
+
 
   <footer>
     <p>&copy; 2025 ELI MAS CONSTRUCTION INC. All rights reserved.</p>
   </footer>
+
+<script>
+  const workType = document.getElementById('work-type');
+  const subservice = document.getElementById('subservice');
+  const subserviceLabel = document.getElementById('subservice-label');
+
+  const options = {
+    exterior: ['Sidewalks', 'Driveways', 'Pavers', 'Stucco', 'Masonry', 'Siding'],
+    interior: ['Painting', 'Flooring', 'Drywall', 'Kitchen Remodel', 'Bathroom Remodel'],
+    roofing: ['Shingle Replacement', 'Flat Roof Repair', 'New Roof Installation']
+  };
+
+  workType.addEventListener('change', function () {
+    const selected = this.value;
+
+    if (!selected) {
+      subservice.style.display = 'none';
+      subserviceLabel.style.display = 'none';
+      return;
+    }
+
+    subserviceLabel.style.display = 'block';
+    subservice.style.display = 'block';
+    subservice.innerHTML = '<option value="">-- Select --</option>';
+
+    options[selected].forEach(service => {
+      const opt = document.createElement('option');
+      opt.value = service.toLowerCase().replace(/\s+/g, '-');
+      opt.textContent = service;
+      subservice.appendChild(opt);
+    });
+  });
+</script>
+
+
 </body>
 </html>

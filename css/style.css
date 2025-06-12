@@ -1,8 +1,13 @@
 body {
   background-color: #f4f1ee;
   color: #333333;
-  font-family: Arial, Helvetica, sans-serif;  /* Added 'Helvetica' for better fallback */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
 }
+
 
 h1, h2, h3 {
   color: #0b355d;
@@ -13,6 +18,44 @@ section h2 {
   margin-bottom: 10px;
 }
 
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 16px 0;
+}
+
+p {
+  font-size: 16px;
+  margin: 12px 0;
+}
+
+
+.about-section, .contact-section, .roofing-gallery {
+  text-align: center;
+}
+
+.about-section {
+  text-align: center;
+  margin: 30px auto;
+  max-width: 800px;
+  min-width: 300px; /* Keeps it readable at smaller widths */
+  padding: 0 10px;   /* Adds breathing room on small screens */
+}
+
+.about-section p {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;  /* Keeps paragraphs natural and readable */
+  line-height: 1.6;
+}
+
+  
 section p {
   line-height: 1.6;
 }
@@ -61,6 +104,31 @@ button:hover, .button:hover {
   margin: 0 auto;  /* Center the images */
   cursor: pointer;
 }
+
+.roofing-gallery .gallery img {
+  margin-bottom: 20px;
+}
+
+/* Roofing Gallery image size */
+.roofing-gallery img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  display: block;
+  margin: auto;
+  cursor: pointer;
+}
+
+.roofing-gallery {
+  text-align: center;
+  padding: 20px;
+}
+
+.roofing-gallery h2,
+.roofing-gallery p {
+  text-align: center;
+}
+
 
 /* Force Lightbox arrows to always show */
 .lb-prev, .lb-next {
@@ -142,6 +210,210 @@ header {
   font-size: 16px;      /* Adjust the font size */
   font-weight: bold;    /* Make the caption bold */
 }
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav-links li {
+  margin: 0;
+}
+
+.tagline {
+  text-align: center;
+  margin: 30px auto;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.contact-section {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.contact-section p {
+  margin: 12px 0;
+  line-height: 1.6;
+}
+
+.contact-details {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.contact-details p {
+  margin: 12px 0;
+  line-height: 1.6;
+}
+
+.back-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 30px auto;
+  text-align: left;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact-form button {
+  background-color: #d1495b;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #b03c4a;
+}
+
+.services-section {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.services-section ul {
+  text-align: left;
+  display: inline-block;
+  margin: 0 auto;
+  padding-left: 20px;
+}
+
+.learn-more-section {
+  text-align: center;
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.learn-more-section .services-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  display: inline-block;
+  text-align: left;
+}
+
+.learn-more-section .services-list li {
+  margin: 8px 0;
+}
+
+.compliance-note {
+  background-color: #f0f0f0;
+  border-left: 2px solid #999999;  /* subtle and professional */
+  padding: 12px 20px;
+  margin: 30px auto;
+  font-size: 1rem;
+  color: #333333;
+  max-width: 800px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.exterior-section {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.exterior-section p {
+  text-align: left;
+  line-height: 1.6;
+}
+
+.exterior-buttons {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.exterior-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* aligns items (buttons) to the right */
+  gap: 10px;             /* adds space between buttons */
+  margin-top: 20px;
+}
+
+.exterior-buttons .button {
+  min-width: 220px;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* adds space between buttons */
+  margin-top: 20px;
+}
+
+.button-group .button {
+  width: 260px; /* fixed width for visual alignment */
+  text-align: center;
+}
+
+
+.interior-section {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.interior-section p {
+  text-align: left;
+  margin: 12px 0;
+  line-height: 1.6;
+}
+
+.interior-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
 
 
 /* You can add more styles here later */
