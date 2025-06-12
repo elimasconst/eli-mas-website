@@ -129,6 +129,53 @@ button:hover, .button:hover {
   text-align: center;
 }
 
+.exterior-gallery .gallery img {
+  margin-bottom: 20px;
+}
+
+/* Exterior Gallery image size */
+.roofing-gallery img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  display: block;
+  margin: auto;
+  cursor: pointer;
+}
+
+.exterior-gallery {
+  text-align: center;
+  padding: 20px;
+}
+
+.exterior-gallery h2,
+.exterior-gallery p {
+  text-align: center;
+}
+
+.interior-gallery .gallery img {
+  margin-bottom: 20px;
+}
+
+/* Interior Gallery image size */
+.interior-gallery img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  display: block;
+  margin: auto;
+  cursor: pointer;
+}
+
+.interior-gallery {
+  text-align: center;
+  padding: 20px;
+}
+
+.interior-gallery h2,
+.interior-gallery p {
+  text-align: center;
+}
 
 /* Force Lightbox arrows to always show */
 .lb-prev, .lb-next {
@@ -413,7 +460,6 @@ footer {
   align-items: center;
   gap: 10px;
 }
-
 
 
 /* You can add more styles here later */
