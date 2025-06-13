@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://elimasconst.github.io/eli-mas-test-website/sitemap.xml

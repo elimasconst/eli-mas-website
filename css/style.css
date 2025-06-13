@@ -272,11 +272,6 @@ footer {
   max-width: 600px;
 }
 
-.contact-details p {
-  margin: 12px 0;
-  line-height: 1.6;
-}
-
 .back-button {
   text-align: center;
   margin-top: 20px;
@@ -447,6 +442,5 @@ footer {
   line-height: 1.6;
   margin: 12px 0;
 }
-
 
 /* You can add more styles here later */
