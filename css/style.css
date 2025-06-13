@@ -77,15 +77,6 @@ button:hover, .button:hover {
   transition: background-color 0.3s ease;  /* Smooth transition for background color */
 }
 
-/* Gallery image size */
-.project-gallery img {
-  width: 100%;
-  max-width: 300px; /* adjust this */
-  border-radius: 8px;
-  display: block;
-  margin: auto;
-  cursor: pointer;
-}
 .project-gallery {
   text-align: center;  /* Center the text inside the gallery */
   padding: 20px;
@@ -93,15 +84,6 @@ button:hover, .button:hover {
 
 .project-gallery h2, .project-gallery p {
   text-align: center;  /* Ensure all text elements are centered */
-}
-
-.project-gallery img {
-  width: 100%;
-  max-width: 300px;  /* Adjust this to fit the desired image size */
-  border-radius: 8px;
-  display: block;
-  margin: 0 auto;  /* Center the images */
-  cursor: pointer;
 }
 
 .roofing-gallery .gallery img {
@@ -219,14 +201,7 @@ section td {
     max-width: 100%;
   }
 }
-.compliance-note {
-  background-color: #f0f0f0;
-  border-left: 4px solid #d1495b;
-  padding: 12px 20px;
-  margin: 20px 0;
-  font-size: 1rem;  /* Increased font size for better readability */
-  color: #333333;
-}
+
 /* Styling for the logo */
 .logo {
   width: 150px; /* Adjust the size of the logo */
