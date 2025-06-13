@@ -41,7 +41,6 @@ p {
 }
 
 .about-section {
-  text-align: center;
   margin: 30px auto;
   max-width: 800px;
   min-width: 300px; /* Keeps it readable at smaller widths */
