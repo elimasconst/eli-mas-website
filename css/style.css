@@ -457,5 +457,41 @@ footer {
   border: 0;
 }
 
+/* Lightbox2 Close Button Adjustment */
+.lb-data .lb-close {
+  position: relative !important;
+  display: block;
+  margin: 10px auto 0 auto; /* top margin, centered horizontally */
+  float: none !important;   /* override Lightbox2's float: right */
+}
+
+.lb-data {
+  text-align: center !important;
+}
+
+.lb-closeContainer {
+  position: absolute !important;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1001;
+  pointer-events: auto;
+}
+
+.lb-close {
+  float: none !important;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 6px 12px;
+  border-radius: 4px;
+  color: white;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.lb-close:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
 
 /* You can add more styles here later */
