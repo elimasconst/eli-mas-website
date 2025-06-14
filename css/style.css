@@ -36,7 +36,7 @@ p {
 }
 
 
-.about-section, .contact-section, .roofing-gallery {
+.about-section, .contact-section, .roofing-gallery, .exterior-gallery {
   text-align: center;
 }
 
@@ -219,17 +219,18 @@ header {
   padding-left: 0;        /* Removes indentation */
 }
 
+
 /* Center the text in the lightbox popup */
 #lightbox .lb-data .lb-details {
   text-align: center;  /* Center the text */
-  width: 100%;          /* Ensure the container uses full width */
-  padding: 10px 0;      /* Adds vertical padding */
+  width: 100%;         /* Ensure the container uses full width */
+  padding: 10px 0;     /* Adds vertical padding */
 }
 
 /* Optionally, if you want to style the caption */
 #lightbox .lb-data .lb-caption {
-  font-size: 16px;      /* Adjust the font size */
-  font-weight: bold;    /* Make the caption bold */
+  font-size: 16px;     /* Adjust the font size */
+  font-weight: bold;   /* Make the caption bold */
 }
 
 .nav-links {
@@ -240,6 +241,7 @@ header {
   padding: 0;
   margin: 0;
 }
+
 .nav-links li {
   margin: 0;
 }
@@ -442,5 +444,18 @@ footer {
   line-height: 1.6;
   margin: 12px 0;
 }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 
 /* You can add more styles here later */
