@@ -57,3 +57,24 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="lightbox/js/lightbox.min.js"></script>
 <script src="js/script.js"></script>
+
+<script>
+  const observer = new MutationObserver(function () {
+    const closeContainer = document.querySelector('.lb-closeContainer');
+    const outerContainer = document.querySelector('.lb-outerContainer');
+
+    if (
+      closeContainer &&
+      outerContainer &&
+      !outerContainer.contains(closeContainer)
+    ) {
+      outerContainer.appendChild(closeContainer);
+      console.log('✅ .lb-closeContainer moved successfully.');
+    }
+  });
+
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true,
+  });
+</script>
